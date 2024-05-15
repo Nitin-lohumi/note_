@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Note({id,text,edithandler,deleteHandler})
 {
     return(
@@ -5,7 +7,7 @@ function Note({id,text,edithandler,deleteHandler})
         <div className="note">
             <textarea readOnly 
             cols={10}
-             className="text-justify p-3 text-white bg-transparent outline-none resize-none"
+             className="text-justify p-3 text-white bg-transparent outline-none resize-none  capitalize"
             >{text}</textarea>
             <div className="noteFooter" style={{justifyContent:"flex-end"}}>
                 <button className="note_save" onClick={()=>deleteHandler(id)}>Delete</button>

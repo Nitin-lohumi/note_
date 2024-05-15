@@ -6,6 +6,9 @@ function Notes(){
   const [inputText,setInputText] = useState("");
   const [notes ,setnotes] = useState([]);
   const [editToggle,setEditToggle] =useState(null);
+    const scroll_bar=()=>{
+            notes.scrollTop=notes.scrollHeight;
+    }
   const edithandler = (id,text)=>{
    setEditToggle(id);
    setInputText(text);
@@ -32,6 +35,7 @@ function Notes(){
     }
      setInputText("");
      setEditToggle(null)
+     scroll_bar();
    }
    useEffect(()=>{
      const data= JSON.parse(localStorage.getItem("notes"))
@@ -40,7 +44,7 @@ function Notes(){
      }
    },[]);
    useEffect(()=>{
-    window.localStorage.setItem("notes ",JSON.stringify(notes));
+    window.localStorage.setItem("notes",JSON.stringify(notes));
    },[notes])
  return(
     <>

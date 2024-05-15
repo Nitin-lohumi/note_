@@ -9,7 +9,7 @@ function CreateNotes({inputText,setInputText,saveHandler}){
            rows={3}
            placeholder="type something here for note"
            value={inputText}
-           className="text-justify text-white bg-transparent outline-none resize-none"
+           className="text-justify text-white bg-transparent outline-none resize-none placeholder-white  capitalize"
            onChange={(e)=>setInputText(e.target.value)}
            maxLength={100}> </textarea>
            <div className="noteFooter">
