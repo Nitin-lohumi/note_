@@ -7,14 +7,14 @@ function Notes(){
   const [notes ,setnotes] = useState([]);
   const [editToggle,setEditToggle] =useState(null);
     const scroll_bar=()=>{
-            notes.scrollTop=notes.scrollHeight;
+        notes.scrollTop=notes.scrollHeight;
     }
   const edithandler = (id,text)=>{
    setEditToggle(id);
    setInputText(text);
   }
   const deleteHandler = (id) =>{
-    const newNotes = notes.filter(n=>n.id !==id);
+    const newNotes = notes.filter(n=>n.id!==id);
     setnotes(newNotes);
   }
    const saveHandler = ()=>{

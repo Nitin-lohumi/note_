@@ -16,7 +16,6 @@ function CreateNotes({inputText,setInputText,saveHandler}){
             <span className="label">{charLimt} left</span>
             <button className="note_save" onClick={saveHandler}>save</button>
            </div>
-
           </div>
         </>
     )
