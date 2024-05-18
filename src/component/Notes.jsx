@@ -46,6 +46,7 @@ function Notes(){
    useEffect(()=>{
     window.localStorage.setItem("notes",JSON.stringify(notes));
    },[notes])
+   
  return(
     <>
    <div className="notes">
